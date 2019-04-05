@@ -1,0 +1,70 @@
+body, html
+{
+	height:100%;
+	margin:0;
+}
+
+h1
+{
+	text-decoration:underline;
+	font-family:Helsinki;
+	color:Black;
+  position:relative;
+  left:25px;
+}
+
+#email
+{
+  border:1px solid #999999;
+  width:40%;
+  position:relative;
+  top:120px;
+  height:28px;
+  font-size:25px;
+  font-family:Helsinki;
+}
+
+#password
+{
+	border:1px solid #999999;
+	width:40%;
+  height:28px;
+	position:relative;
+	top:200px;
+  font-size:25px;
+	font-family:Helsinki;
+}
+
+#p1
+{
+  left:407px;
+  top:160px;
+  position:relative;
+  font-family:Helsinki;
+}
+
+#p2
+{
+  left:407px;
+  top:210px;
+  position:relative;
+  font-family:Helsinki;
+}
+
+#loginButton
+{
+	position:relative;
+	top:230px;
+  height:40px;
+  width:7%;
+  font-size:15px;
+}
+
+#signupButton
+{
+  position:relative;
+	top:230px;
+  height:40px;
+  width:7%;
+  font-size:15px;
+}

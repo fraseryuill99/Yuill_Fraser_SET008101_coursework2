@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    style.
+      body {
+      background-color: #FED3CC;
+      }
+    link(rel='stylesheet', type='text/css', href='/stylesheets/loginAesthetics.css')
+    title SET08101 - Web Technology Assessment 2 - login
+  body
+    #log.thing
+      h1
+        span(style='color: red;') L
+        span(style='color: orange;') o
+        span(style='color: green;') g
+        span(style='color: indigo;') i
+        span(style='color: violet;') n
+      p#p1 Email:
+      p#p2 Password:
+      form(action='/', method='POST')
+        input#email(type='text' name='email' rows='1', cols='30', autofocus='')
+        input#password(type='password' name='password' rows='1', cols='30', autofocus='')
+        input#loginButton(type='submit')
+      button#signupButton(type='button', onclick='move()') signup
+      script.
+        function move() {
+        window.location.href = '/signup';
+        }

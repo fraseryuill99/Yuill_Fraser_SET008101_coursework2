@@ -1,0 +1,23 @@
+html
+  head
+    link(rel='stylesheet', type='text/css', href='/stylesheets/signupAesthetics.css')
+    title SET08101 - Web Technology Assessment 2 - sign up
+  body(style='background-color:#FED3CC;')
+    h1
+      span(style='color: blue;') S
+      span(style='color: green;') i
+      span(style='color: yellow;') g
+      span(style='color: red;') n
+      span(style='color: purple;') u
+      span(style='color: orange;') p
+    p#p1 First name:
+    p#p2 Last Name:
+    p#p3 Email:
+    p#p4 Password:
+    form(action='/signup', method='POST')
+      input#first(type='text', rows='1', name='first', cols='30', autofocus='')
+      input#last(type='text', rows='1', name='last', cols='30', autofocus='')
+      input#email(type='text', rows='1', name='email2', cols='30', autofocus='')
+      input#password(rows='1', name='password2', cols='30', autofocus='', type='password')
+      input#signupButton(type='submit')
+    h2=message

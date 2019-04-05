@@ -1,0 +1,306 @@
+body, html
+{
+	height:100%;
+	margin:0;
+}
+
+.tab
+{
+	background-color:white;
+	color:Black;
+	float:left;
+	border:none;
+	outline:none;
+	padding:14px 16px;
+	font-size:17px;
+	width:25%;
+}
+
+.tab:hover
+{
+	background-color:#777;
+}
+
+.stuff
+{
+	color:white;
+	display:none;
+	height:120%;
+	padding:100px 20px;
+}
+
+#Ciphers
+{
+	background-color:#FED3CC;
+}
+
+#About
+{
+	background-color:#FED3CC;
+}
+
+#Videos
+{
+	background-color:#FED3CC;
+}
+
+#mailer
+{
+	background-color:#FED3CC;
+}
+
+h1
+{
+	text-decoration:underline;
+	font-family:Helsinki;
+	color:Black;
+}
+
+h2
+{
+	text-decoration:underline;
+	font-family:Arial;
+	color:Black;
+	font-size:30px;
+}
+
+h3
+{
+	font-family:Arial;
+	color:Black;
+	font-weight:Bold;
+	font-size:20px;
+}
+
+h4
+{
+	font-family:Arial;
+	color:Black;
+	font-weight:Bold;
+	font-size:20px;
+}
+
+h5
+{
+	font-family:Arial;
+	color:Black;
+	font-weight:Bold;
+	font-size:20px;
+}
+
+h6
+{
+	font-family:Utsaah;
+	text-decoration:underline;
+	color:black;
+	font-size:30px;
+	position:relative;
+	top:-40px;
+}
+
+h7
+{
+	text-decoration:underline;
+	font-family:Helsinki;
+	color:Black;
+	font-size:30px;
+}
+
+#TA1
+{
+	border:1px solid #999999;
+	width:40%;
+	margin:5px 0;
+	position:relative;
+	float:left;
+	top:-73px;
+	font-family:Helsinki;
+}
+
+#TA2
+{
+	border:1px solid #999999;
+	width:40%;
+	margin:5px 0;
+	float:right;
+	position:relative;
+	left:5px;
+	top:-110px;
+	font-family:Helsinki;
+}
+
+#TA3
+{
+	border:1px solid #999999;
+	width:40%;
+	margin:5px 0;
+	position:relative;
+	left:420px;
+	top:75px;
+	font-family:Helsinki;
+}
+
+#B1
+{
+	position:relative;
+	top:21px;
+	left:-340px;
+}
+
+#B2
+{
+	position:relative;
+	float:right;
+	left:330px;
+	top:-37px;
+}
+
+#B3
+{
+	position:relative;
+	left:300px;
+	top:-16px;
+}
+
+#p1
+{
+	position:relative;
+	left:605px;
+	top:55px;
+	word-spacing:5px;
+	font-weight:bold;
+	color:Black;
+}
+
+#p2
+{
+	position:absolute;
+	bottom:10px;
+	left:475px;
+	word-spacing:4px;
+	color:Black;
+}
+
+#p3
+{
+	word-spacing:4px;
+	color:Black;
+	font-family:Arial;
+}
+
+#p4
+{
+	word-spacing:4px;
+	color:Black;
+	font-family:Arial;
+}
+
+#p5
+{
+	word-spacing:4px;
+	color:Black;
+	font-family:Arial;
+}
+
+#p6
+{
+	word-spacing:4px;
+	color:Black;
+	font-family:Arial;
+	position:relative;
+	font-weight:Bold;
+	top:-20px;
+}
+
+#email3
+{
+	border:1px solid #999999;
+  width:40%;
+  position:relative;
+  top:35px;
+	left:100px;
+  height:32px;
+  font-size:25px;
+  font-family:Helsinki;
+}
+
+#subject
+{
+	border:1px solid #999999;
+  width:40%;
+  position:relative;
+  top:75px;
+  height:32px;
+  font-size:25px;
+  font-family:Helsinki;
+}
+
+#message
+{
+	border:1px solid #999999;
+	width:40%;
+	height:80px;
+	margin:5px 0;
+	position:relative;
+	top:173px;
+	left:150px;
+	font-family:Helsinki;
+}
+
+img
+{
+	border:1px solid #ddd;
+	border-radius:4px;
+	padding:5px;
+	width:150px;
+}
+
+.DropButton
+{
+	background-color: #3498DB;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.DropButton:hover, .DropButton:focus
+{
+	background-color:#2980B9;
+}
+
+.DropD
+{
+	position:relative;
+	left:587px;
+	top:-80px;
+}
+
+.DropdownMenu
+{
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.DropdownMenu a
+{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.DropdownMenu a:hover
+{
+	background-color:#ddd;
+}
+
+.show
+{
+	display:block;
+}

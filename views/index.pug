@@ -1,0 +1,93 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', type='text/css', href='/stylesheets/aesthetics.css')
+    title SET08101 - Web Technology Assessment 2 - cypher
+  body
+    button#defaultOpen.tab(onclick="openPage('Ciphers', this)") Ciphers
+    button.tab(onclick="openPage('About', this)") About
+    button.tab(onclick="openPage('Videos', this)") Videos
+    button.tab(onclick="openPage('mailer', this)") Mailer
+    #Ciphers.stuff
+      h1
+        span(style='color: red') C
+        span(style='color: orange') y
+        span(style='color: yellow') p
+        span(style='color: green') h
+        span(style='color: blue') e
+        span(style='color: indigo') r
+        span(style='color: violet') s
+      p#p1
+        | This becomes...
+      #CipherAndMessage
+        .DropD
+          button.DropButton(onclick='Drop()') Choose Cipher
+          #Dropdown.DropdownMenu
+            button#KeyPhrase(type='button', onclick='Change1()') Key Phrase cipher
+            button#Bacon(type='button', onclick='Change2()') Baconian cipher
+            button#Morse(type='button', onclick='Change3()') Morse Code cipher
+        button#B1(type='button', onclick='Cipher()') Press to encode
+      p
+      #Encoded
+        form(action='/index', method='POST')
+          textarea#TA2(rows='5', cols='30', autofocus='' name='TA2')
+          textarea#TA1(rows='5', cols='30', autofocus='' name='TA1') Enter Message...
+          input#message(name='message' type='submit' value='send message')
+        button#B3 Play (only if morse code)
+        button#B2(type='button', onclick='Decipher()') Press to decode
+      #Decoded
+        textarea#TA3(rows='5', cols='30', autofocus='')
+      #Extra
+        p#p2
+          | The ciphers used here were...
+          a(href='http://www.cryptogram.org/downloads/aca.info/ciphers/KeyPhrase.pdf', target='_blank')    Key Phrase
+          a(href='https://en.wikipedia.org/wiki/Bacon%27s_cipher', target='_blank')    Baconian
+          a(href='https://en.wikipedia.org/wiki/Morse_code', target='_blank')    Morse Code
+      script(type='text/javascript', src='/javascripts/code.js')
+      h9=message
+    #About.stuff
+      h2
+        span(style='color: blue') A
+        span(style='color: green') b
+        span(style='color: violet') o
+        span(style='color: orange') u
+        span(style='color: red') t
+      h3 KeyPhrase Encryption
+      p#p3
+        | In cryptography, a key phrase cipher (a.k.a substitution cipher) is a method of encrypting by which units of plaintext are replaced with ciphertext, according to a fixed system;
+        | the "units" may be single letters (the most common), pairs of letters, triplets of letters, mixtures of the above, and so forth. The receiver deciphers the text by
+        | performing the inverse substitution.
+        | Substitution ciphers can be compared with transposition ciphers. In a transposition cipher, the units of the plaintext are rearranged in a different and usually quite
+        | complex order, but the units themselves are left unchanged. By contrast, in a substitution cipher, the units of the plaintext are retained in the same sequence in the
+        | ciphertext, but the units themselves are altered.
+        | There are a number of different types of substitution cipher. If the cipher operates on single letters, it is termed a simple substitution cipher; a cipher that operates
+        | on larger groups of letters is termed polygraphic. A monoalphabetic cipher uses fixed substitution over the entire message, whereas a polyalphabetic cipher uses a number
+        | of substitutions at different positions in the message, where a unit from the plaintext is mapped to one of several possibilities in the ciphertext and vice versa.
+      h4 Baconian Encryption
+      p#p4
+        | bacons cipher or the Baconian cipher is a method of steganography (a method of hiding a secret message as opposed to just a cipher) devised by Francis Bacon in 1605. A message
+        | is concealed in the presentation of text, rather than its content.
+        | To encode a message, each letter of the plaintext is replaced by a group of five of the letters 'A' or 'B' (or 5 numbers '1' or '0'). This replacement is a binary encoding and is done according to
+        | the alphabet of the Baconian cipher (from the Latin Alphabet).
+      h5 Morse Code Encryption
+      p#p5
+        | Morse code is a character encoding scheme used in telecommunication that encodes text characters as standardized sequences of two different signal durations called dots and dashes or dits
+        | and dahs. Morse code is named for Samuel F. B. Morse, an inventor of the telegraph.
+        | Each Morse code symbol is formed by a sequence of dots and dashes. The dot duration is the basic unit of time measurement in Morse code transmission. The duration of a dash is three times the
+        | duration of a dot. Each dot or dash within a character is followed by period of signal absence, called a space, equal to the dot duration. The letters of a word are separated by a space of duration
+        | equal to three dots, and the words are separated by a space equal to seven dots.
+      img(src='/images/Samuel_Morse.jpg')
+      p#p6 Samuel F. B. Morse
+    #Videos.stuff
+      h6
+        span(style='color: indigo') V
+        span(style='color: red') i
+        span(style='color: blue') d
+        span(style='color: green') e
+        span(style='color: yellow') o
+        span(style='color: violet') s
+      iframe(width='420', height='315', src='https://www.youtube.com/embed/XreUs1I1ZdY')
+      iframe(width='420', height='315', src='https://www.youtube.com/embed/wCQSIub_g7M')
+      iframe(width='420', height='315', src='https://www.youtube.com/embed/HY_OIwideLg')
+    #mailer.stuff
+      h7 Mail

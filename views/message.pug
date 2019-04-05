@@ -1,0 +1,18 @@
+html
+  head
+    link(rel='stylesheet', type='text/css', href='/stylesheets/messageAesthetics.css')
+    title SET08101 - Web Technology Assessment 2 - message
+  body(style='background-color:#FED3CC;')
+    h1
+      span(style='color: red;') M
+      span(style='color: indigo;') e
+      span(style='color: blue;') s
+      span(style='color: green;') s
+      span(style='color: orange;') a
+      span(style='color: yellow;') g
+      span(style='color: purple;') e
+    form(action='/message', method='POST')
+      input#email(type='text', rows='1', name='email', cols='30', autofocus='')
+      input#subject(type='text', rows='1', name='subject', cols='30', autofocus='')
+      input#signupButton(type='submit')
+    h2=message
