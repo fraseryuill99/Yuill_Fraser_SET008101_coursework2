@@ -78,13 +78,12 @@ router.post('/', function(req, res)
             currentUserPass = pass2;
             res.render('index', { title: 'Home' });
           }
-
-          else
-          {
-            res.render('login', { title: 'Login' });
-          }
         });
-    });
+      });
+    /*if (currentUser == null)
+    {
+      res.render('login', { title: 'Login' });
+    }*/
 });
 
 router.post('/signup', function(req, res)
@@ -140,21 +139,53 @@ router.post('/index', function(req, res)
       res.redirect('/message');
 });
 
+router.post('/index2', function(req, res)
+{
+  var array = [];
+  var temp;
+  db2.all("SELECT email, subject, message, decodedMess, frm FROM messaging", function(err, rows) {
+    rows.forEach(function (row) {
+      if(row.email == currentUser)
+      {
+        temp = {email: row.email, subject: row.subject, mess: row.message, deMess: row.decodedMess, frm: row.frm};
+        console.log(temp['mess']);
+        array.push(temp);
+      }
+    });
+  });
+
+  if (temp == null)
+  {
+    res.render('inbox', { title: 'Inbox', error: 'Inbox is empty'});
+  }
+
+  else
+    res.render('inbox', { title: 'Inbox', message: array});
+});
+
 router.post('/message', function(req, res)
 {
   var email3 = req.body.email3;
   var subject = req.body.subject;
   var found = false;
 
-  db.all("SELECT email FROM info", function(err, rows) {
-    rows.forEach(function (row) {
-          if(row.email == email3)
-          {
-              db2.run("INSERT INTO messaging (email, subject, message, decodedMess, frm) VALUES(?, ?, ?, ?)", email3, subject, message, decodedMessage, currentUser);
-              found = true;
-          }
-        });
-      });
+  if (subject != null && email3 != null)
+  {
+    db.all("SELECT email FROM info", function(err, rows) {
+      rows.forEach(function (row) {
+            if(row.email == email3)
+            {
+                db2.run("INSERT INTO messaging (email, subject, message, decodedMess, frm) VALUES(?, ?, ?, ?, ?)", email3, subject, message, decodedMessage, currentUser);
+                found = true;
+              }
+            });
+          });
+    }
+
+    else
+    {
+      res.render('message', { title: 'Message', message: 'Error, fields cannot be blank'});
+    }
 
   if(found = false)
   {
@@ -162,7 +193,7 @@ router.post('/message', function(req, res)
   }
 
   else
-      res.redirect('/index');
+      res.render('index', { title: 'Home'});
 });
 
 module.exports = router;
