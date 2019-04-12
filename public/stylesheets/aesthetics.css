@@ -113,7 +113,7 @@ h7
 	margin:5px 0;
 	position:relative;
 	float:left;
-	top:-73px;
+	top:-90px;
 	font-family:Helsinki;
 }
 
@@ -125,7 +125,7 @@ h7
 	float:right;
 	position:relative;
 	left:5px;
-	top:-110px;
+	top:-89px;
 	font-family:Helsinki;
 }
 
@@ -135,8 +135,8 @@ h7
 	width:40%;
 	margin:5px 0;
 	position:relative;
-	left:420px;
-	top:75px;
+	left:410px;
+	top:20px;
 	font-family:Helsinki;
 }
 
@@ -144,22 +144,36 @@ h7
 {
 	position:relative;
 	top:50px;
-	left:14px;
+	left:190px;
 }
 
 #B2
 {
 	position:relative;
 	float:right;
-	left:30px;
-	top:37px;
+	left:240px;
+	top:-30px;
 }
 
 #B3
 {
 	position:relative;
-	left:30px;
-	top:-16px;
+	left:500px;
+	top:-9px;
+}
+
+#message
+{
+	position:relative;
+	left:450px;
+	top:39px;
+}
+
+#inbx
+{
+	position:relative;
+	left:1000px;
+	top:-370px;
 }
 
 #p1
@@ -210,41 +224,6 @@ h7
 	position:relative;
 	font-weight:Bold;
 	top:-20px;
-}
-
-#email3
-{
-	border:1px solid #999999;
-  width:40%;
-  position:relative;
-  top:35px;
-	left:100px;
-  height:32px;
-  font-size:25px;
-  font-family:Helsinki;
-}
-
-#subject
-{
-	border:1px solid #999999;
-  width:40%;
-  position:relative;
-  top:75px;
-  height:32px;
-  font-size:25px;
-  font-family:Helsinki;
-}
-
-#message
-{
-	border:1px solid #999999;
-	width:40%;
-	height:80px;
-	margin:5px 0;
-	position:relative;
-	top:173px;
-	left:150px;
-	font-family:Helsinki;
 }
 
 img

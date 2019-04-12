@@ -18,7 +18,8 @@ h1
   border:1px solid #999999;
   width:40%;
   position:relative;
-  top:120px;
+  top:85px;
+	left:477px;
   height:28px;
   font-size:25px;
   font-family:Helsinki;
@@ -30,7 +31,8 @@ h1
 	width:40%;
   height:28px;
 	position:relative;
-	top:200px;
+	top:167px;
+	left:-65px;
   font-size:25px;
 	font-family:Helsinki;
 }
@@ -55,6 +57,7 @@ h1
 {
 	position:relative;
 	top:230px;
+	left:-20px;
   height:40px;
   width:7%;
   font-size:15px;
@@ -64,6 +67,8 @@ h1
 {
   position:relative;
 	top:230px;
+	left:250px;
+	top:190px;
   height:40px;
   width:7%;
   font-size:15px;

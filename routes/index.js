@@ -79,11 +79,11 @@ router.post('/', function(req, res)
             res.render('index', { title: 'Home' });
           }
         });
+        if (currentUser == null)
+        {
+          res.render('login', {title: 'Login'})
+        }
       });
-    /*if (currentUser == null)
-    {
-      res.render('login', { title: 'Login' });
-    }*/
 });
 
 router.post('/signup', function(req, res)
@@ -148,19 +148,11 @@ router.post('/index2', function(req, res)
       if(row.email == currentUser)
       {
         temp = {email: row.email, subject: row.subject, mess: row.message, deMess: row.decodedMess, frm: row.frm};
-        console.log(temp['mess']);
         array.push(temp);
       }
     });
-  });
-
-  if (temp == null)
-  {
-    res.render('inbox', { title: 'Inbox', error: 'Inbox is empty'});
-  }
-
-  else
     res.render('inbox', { title: 'Inbox', message: array});
+  });
 });
 
 router.post('/message', function(req, res)

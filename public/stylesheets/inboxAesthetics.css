@@ -4,5 +4,17 @@ h1
 	font-family:Helsinki;
 	color:Black;
   position:relative;
-  left:25px;
+  left:575px;
+}
+
+ul
+{
+  position:relative;
+  left:500px;
+}
+
+li
+{
+  font-family:Helsinki;
+  font-size:25px;
 }

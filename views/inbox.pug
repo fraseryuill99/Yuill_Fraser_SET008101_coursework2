@@ -1,7 +1,16 @@
+html
+  head
+    link(rel='stylesheet', type='text/css', href='/stylesheets/inboxAesthetics.css')
+    title SET08101 - Web Technology Assessment 2 - Inbox
 h1 Mail
-ul
-  each val in message
-    li='To: ' + val.email
-    li='From: ' + val.frm
-    li='Subject: ' + val.Subject
-    li='Message: ' + val.mess
+body(style='background-color:#FED3CC;')
+  ul
+    each val in message
+      p
+        li='To: ' + val.email
+        li='From: ' + val.frm
+        li='Subject: ' + val.subject
+        li='Message: ' + val.mess
+      p
+        li='Decoded Message: ' + val.deMess
+      p
