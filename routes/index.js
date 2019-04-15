@@ -127,6 +127,8 @@ router.post('/signup', function(req, res)
 
 router.post('/index', function(req, res)
 {
+    message = null;
+    decodedMess = null;
     message = req.body.TA2;
     decodedMessage = req.body.TA1;
 
@@ -166,6 +168,11 @@ router.post('/message', function(req, res)
   if (subject == "" || email3 == "")
   {
     res.render('message', { title: 'Message', message: 'Error, fields cannot be blank'})
+  }
+
+  else if(message == "" || decodedMess == "")
+  {
+    res.render('message', { title: 'Message', message: 'Error, no message to send'})
   }
 
   else
