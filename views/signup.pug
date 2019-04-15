@@ -15,9 +15,9 @@ html
     p#p3 Email:
     p#p4 Password:
     form(action='/signup', method='POST')
-      input#first(type='text', rows='1', name='first', cols='30', autofocus='')
-      input#last(type='text', rows='1', name='last', cols='30', autofocus='')
-      input#email(type='text', rows='1', name='email2', cols='30', autofocus='')
+      textarea#first(type='text', rows='1', name='first', cols='30', autofocus='')
+      textarea#last(type='text', rows='1', name='last', cols='30', autofocus='')
+      textarea#email(type='text', rows='1', name='email2', cols='30', autofocus='')
       input#password(rows='1', name='password2', cols='30', autofocus='', type='password')
       input#signupButton(type='submit')
     h2=message

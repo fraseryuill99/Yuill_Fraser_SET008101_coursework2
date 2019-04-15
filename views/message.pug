@@ -11,8 +11,10 @@ html
       span(style='color: orange;') a
       span(style='color: yellow;') g
       span(style='color: purple;') e
+    p#p1 To (email):
+    p#p2 Subject:
     form(action='/message', method='POST')
-      input#email3(type='text', rows='1', name='email3', cols='30', autofocus='')
-      input#subject(type='text', rows='1', name='subject', cols='30', autofocus='')
-      input#signupButton(type='submit')
+      textarea#email3(rows='1', name='email3', cols='30', autofocus='')
+      textarea#subject(rows='1', name='subject', cols='30', autofocus='')
+      input#signupButton(type='submit' name='signupButton')
     h2=message

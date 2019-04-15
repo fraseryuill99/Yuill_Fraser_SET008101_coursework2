@@ -93,17 +93,17 @@ router.post('/signup', function(req, res)
   var email1 = req.body.email2;
   var pass1 = req.body.password2;
 
-  if (first1 == null)
+  if (first1 == "")
   {
     res.render('signup', { title: 'Signup', message: 'First name cannot be blank'});
   }
 
-  else if (last1 == null)
+  else if (last1 == "")
   {
     res.render('signup', { title: 'Signup', message: 'Last name cannot be blank'});
   }
 
-  else if (email1 == null)
+  else if (email1 == "")
   {
     res.render('signup', { title: 'Signup', message: 'Email cannot be blank'});
   }
@@ -113,7 +113,7 @@ router.post('/signup', function(req, res)
     res.render('signup', { title: 'Signup', message: 'Invalid email'});
   }
 
-  else if (pass1 == null)
+  else if (pass1 == "")
   {
     res.render('signup', { title: 'Signup', message: 'Password cannot be blank'});
   }
@@ -161,31 +161,35 @@ router.post('/message', function(req, res)
   var subject = req.body.subject;
   var found = false;
 
-  if (subject != null && email3 != null)
-  {
-    db.all("SELECT email FROM info", function(err, rows) {
-      rows.forEach(function (row) {
-            if(row.email == email3)
-            {
-                db2.run("INSERT INTO messaging (email, subject, message, decodedMess, frm) VALUES(?, ?, ?, ?, ?)", email3, subject, message, decodedMessage, currentUser);
-                found = true;
-              }
-            });
-          });
-    }
+  console.log(email3 + " and " + subject);
 
-    else
-    {
-      res.render('message', { title: 'Message', message: 'Error, fields cannot be blank'});
-    }
-
-  if(found = false)
+  if (subject == "" || email3 == "")
   {
-    res.render('message', { title: 'Message', message: 'User does not exist'});
+    res.render('message', { title: 'Message', message: 'Error, fields cannot be blank'})
   }
 
   else
-      res.render('index', { title: 'Home'});
+  {
+      db.all("SELECT email FROM info", function(err, rows) {
+        rows.forEach(function (row) {
+              if(row.email == email3)
+              {
+                  db2.run("INSERT INTO messaging (email, subject, message, decodedMess, frm) VALUES(?, ?, ?, ?, ?)", email3, subject, message, decodedMessage, currentUser);
+                  found = true;
+                }
+              });
+
+              console.log(found);
+              if (found == false)
+              {
+                res.render('message', { title: 'Message', message: 'User does not exist'})
+              }
+
+              else {
+                res.render('index', { title: 'Home'})
+              }
+            });
+  }
 });
 
 module.exports = router;
