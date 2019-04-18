@@ -163,8 +163,6 @@ router.post('/message', function(req, res)
   var subject = req.body.subject;
   var found = false;
 
-  console.log(email3 + " and " + subject);
-
   if (subject == "" || email3 == "")
   {
     res.render('message', { title: 'Message', message: 'Error, fields cannot be blank'})
@@ -186,7 +184,6 @@ router.post('/message', function(req, res)
                 }
               });
 
-              console.log(found);
               if (found == false)
               {
                 res.render('message', { title: 'Message', message: 'User does not exist'})
